@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title> IQ Test - Fast and Accurate Online IQ Test</title>
+  <meta name="Description" content="Fast and accurate online IQ test to get your IQ score quickly and find out how smart you are.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f0f0f0;
+    }
+
+    #content {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .title-container label {
+      font-size: 24px;
+      color: #001e4d;
+      font-weight: 600;
+    }
+
+    .slogan h1 {
+      font-size: 30px;
+      color: #fff;
+      font-weight: 600;
+      margin-top: 10px;
+      background-color: #001e4d;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .intro h2 {
+      font-size: 24px;
+      color: #001e4d;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .intro-text p {
+      font-size: 16px;
+      color: #001e4d;
+      line-height: 1.;
+      margin-bottom: 12px;
+    }
+
+    .iq-test form {
+      text-align: center;
+    }
+
+    .birthdateLabel {
+      font-size: 24px;
+      color: #001e4d;
+      font-weight: 700;
+      margin: 20px 0;
+    }
+
+    .birthdate select {
+      font-size: 16px;
+      padding: 4px;
+      margin: 5px;
+      margin-bottom: 13px;
+      border-radius: 5px;
+      border: 1px solid #001e4d;
+    }
+
+    #mess {
+      display: none;
+      color: #f10c0c;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .start-test a {
+      display: inline-block;
+      background-color: #001e4d;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .start-test a:hover {
+      background-color: #002b65;
+    }
+
+    /* Additional Styles */
+    .main-content {
+      padding-top: 30px;
+      border-top: 2px solid #001e4d;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      color: #001e4d;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .box {
+      padding: 20px;
+      border: 1px solid #001e4d;
+      border-radius: 10px;
+      background-color: #f0f0f0;
+    }
+
+    .columns {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .column {
+      flex: 1;
+    }
+
+    .column p {
+      margin-bottom: 15px;
+    }
+      @media only screen and (max-width: 600px) {
+      .slogan h1 {
+        font-size: 24px;
+        padding: 8px;
+      }
+
+      .intro h2 {
+        font-size: 20px;
+      }
+
+      .intro-text p {
+        font-size: 14px;
+      }
+
+      .birthdateLabel {
+        font-size: 20px;
+      }
+
+      .birthdate select {
+        font-size: 14px;
+        padding: 6px;
+        margin-left: 1px;
+        margin-right: 1px;
+        margin-inline-start: 1px;
+        margin-inline-end: 1px;
+      }
+
+      .start-test a {
+        font-size: 18px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <header class="logo-container">
+      <div class="menu-container">
+        <div class="logo"><a title="IQ Test" href="/"></a></div>
+        <div class="title-container"><label></label></div>
+        <div class="slogan"><h1>Fast & Accurate IQ Test</h1></div>
+      </div>
+    </header>
+    <div class="main-content">
+      <section class="intro">
+        <div><h2>All about Intelligence Quotient (IQ)</h2></div>
+        <div class="intro-text">
+          <p>Unlock Your Intellectual Potential! The Global IQ Average is 100. <strong>Discover Your IQ Score Now!</strong> Take Our Rapid and Precise IQ Test to <strong>Uncover Your True Intelligence Level</strong>. Begin the Instant IQ Test and Reveal the Genius Within!</p>
+        </div>
+      </section>
+      <section class="iq-test">
+        <form id="iqtest" action="iq.asp" method="post">
+          <label class="birthdateLabel">Enter Your Birthdate</label>
+          <div class="birthdate">
+            <select id="birthYear">
+              <option value="">Select Year</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
+              <option value="2017">2017</option>
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+              <option value="2014">2014</option>
+              <option value="2013">2013</option>
+              <option value="2012">2012</option>
+              <option value="2011">2011</option>
+              <option value="2010">2010</option>
+              <option value="2009">2009</option>
+              <option value="2008">2008</option>
+              <option value="2007">2007</option>
+              <option value="2006">2006</option>
+              <option value="2005">2005</option>
+              <option value="2004">2004</option>
+              <option value="2003">2003</option>
+              <option value="2002">2002</option>
+              <option value="2001">2001</option>
+              <option value="2000">2000</option>
+              <option value="1999">1999</option>
+              <option value="1998">1998</option>
+              <option value="1997">1997</option>
+              <option value="1996">1996</option>
+              <option value="1995">1995</option>
+              <option value="1994">1994</option>
+              <option value="1993">1993</option>
+              <option value="1992">1992</option>
+              <option value="1991">1991</option>
+              <option value="1990">1990</option>
+              <option value="1989">1989</option>
+              <option value="1988">1988</option>
+              <option value="1987">1987</option>
+              <option value="1986">1986</option>
+              <option value="1985">1985</option>
+              <option value="1984">1984</option>
+              <option value="1983">1983</option>
+              <option value="1982">1982</option>
+              <option value="1981">1981</option>
+              <option value="1980">1980</option>
+              <option value="1979">1979</option>
+              <option value="1978">1978</option>
+              <option value="1977">1977</option>
+              <option value="1976">1976</option>
+              <option value="1975">1975</option>
+              <option value="1974">1974</option>
+              <option value="1973">1973</option>
+              <option value="1972">1972</option>
+              <option value="1971">1971</option>
+              <option value="1970">1970</option>
+              <option value="1969">1969</option>
+              <option value="1968">1968</option>
+              <option value="1967">1967</option>
+              <option value="1966">1966</option>
+              <option value="1965">1965</option>
+              <option value="1964">1964</option>
+              <option value="1963">1963</option>
+              <option value="1962">1962</option>
+              <option value="1961">1961</option>
+              <option value="1960">1960</option>
+              <option value="1959">1959</option>
+              <option value="1958">1958</option>
+              <option value="1957">1957</option>
+              <option value="1956">1956</option>
+              <option value="1955">1955</option>
+              <option value="1954">1954</option>
+              <option value="1953">1953</option>
+              <option value="1952">1952</option>
+              <option value="1951">1951</option>
+              <option value="1950">1950</option>
+              <option value="1949">1949</option>
+              <option value="1948">1948</option>
+              <option value="1947">1947</option>
+              <option value="1946">1946</option>
+              <option value="1945">1945</option>
+              <option value="1944">1944</option>
+              <option value="1943">1943</option>
+              <option value="1942">1942</option>
+              <option value="1941">1941</option>
+              <option value="1940">1940</option>
+              <option value="1939">1939</option>
+              <option value="1938">1938</option>
+              <option value="1937">1937</option>
+              <option value="1936">1936</option>
+              <option value="1935">1935</option>
+              <option value="1934">1934</option>
+              <option value="1933">1933</option>
+            </select>            
+                       
+            <select id="birthMonth">
+              <option value="">Select Month</option>
+              <option value="01">January</option>
+              <option value="02">February</option>
+              <option value="03">March</option>
+              <option value="04">April</option>
+              <option value="05">May</option>
+              <option value="06">June</option>
+              <option value="07">July</option>
+              <option value="08">August</option>
+              <option value="09">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+            <select id="birthDay">
+              <option value="">Select Day</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+          </div>
+          <div id="mess">We need a valid birthdate to determine your IQ score</div>
+          <div class="start-test">
+            <a id="start-test" class="start-test" href="iq1.html">Start The Test</a>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+  <script>
+    const yearSelect = document.getElementById('birthYear');
+    const monthSelect = document.getElementById('birthMonth');
+    const daySelect = document.getElementById('birthDay');
+    const startTestButton = document.getElementById('start-test');
+    const messageDiv = document.getElementById('mess');
+
+    // Function to check if all three select elements have valid values
+    const checkValidBirthdate = () => {
+      return (
+        yearSelect.value !== '' &&
+        yearSelect.value !== 'Select Year' && // Check if it's not the default option
+        monthSelect.value !== '' &&
+        monthSelect.value !== 'Select Month' && // Check if it's not the default option
+        daySelect.value !== '' &&
+        daySelect.value !== 'Select Day' // Check if it's not the default option
+      );
+    };
+
+    // Function to enable/disable the "Start The Test" button based on the birthdate selection
+    const toggleStartButton = () => {
+      if (checkValidBirthdate()) {
+        startTestButton.removeAttribute('disabled');
+        messageDiv.style.display = 'none'; // Hide the message when birthdate options are occupied
+      } else {
+        startTestButton.setAttribute('disabled', 'disabled');
+      }
+    };
+
+    // Function to show the message if the user clicks "Start The Test" without selecting a valid birthdate
+    const showValidationMessage = () => {
+      if (!checkValidBirthdate()) {
+        messageDiv.style.display = 'block';
+        event.preventDefault(); // Prevent the link from being followed if the birthdate is invalid
+      } else {
+        messageDiv.style.display = 'none';
+        // If the birthdate is selected, proceed to the test page
+        window.location.href = 'iq1.html';
+      }
+    };
+
+    // Add event listeners to the select elements to update the button state whenever the user makes a selection
+    yearSelect.addEventListener('change', () => {
+      toggleStartButton();
+    });
+
+    monthSelect.addEventListener('change', () => {
+      toggleStartButton();
+    });
+
+    daySelect.addEventListener('change', () => {
+      toggleStartButton();
+    });
+
+    // Add an event listener to the "Start The Test" button to show the validation message on click
+    startTestButton.addEventListener('click', showValidationMessage);
+  </script>
+</body>
+</html>

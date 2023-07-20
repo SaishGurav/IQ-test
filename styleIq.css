@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #001e4d;
+  }
+  
+  .app {
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 15px; 
+  }
+  
+  .app h1 {
+    font-size: 30px;
+    color: #001e4d;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+  }
+  
+  .quiz {
+    padding: 20px 0;
+  }
+  
+  .quiz h2 {
+    font-size: 18px;
+    color: #001e4d;
+    font-weight: 600;
+  }
+  
+  .btn {
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn:hover:not([disabled]) {
+    background: #c1c3c5;
+    color: #222;
+  }
+  
+  .btn:disabled {
+    cursor: no-drop;
+    background-color: #ccc;
+  }
+  
+  #next-btn {
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 7px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .correct {
+    background: #222;
+    color: #fff;
+    pointer-events: none;
+  }
+  
+  .incorrect {
+    background: #222;
+    color: #fff;
+    pointer-events: none;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .timer-container {
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  #timer {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fb7508;
+  }
+  
+  
+  /* Additional Styles */
+  
+  /* Media Query for Small Screens (phones) */
+  @media screen and (max-width: 480px) {
+    .app {
+      margin: 50px auto 0;
+      padding: 20px;
+      margin-top: 15px;
+    }
+  
+    .app h1 {
+      font-size: 24px;
+      padding-bottom: 15px;
+    }
+  
+    .quiz h2 {
+      font-size: 16px;
+    }
+  
+    .btn {
+      font-size: 14px;
+    }
+  
+    #next-btn {
+      font-size: 16px;
+      padding: 8px;
+    }
+  
+    .quiz {
+      padding: 15px 0;
+    }
+  }
+  
